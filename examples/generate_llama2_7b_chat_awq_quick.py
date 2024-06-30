@@ -8,7 +8,7 @@ device = "cuda"
 
 torch.random.manual_seed(0)
 
-quant_path = "llama-2-7b-chat-hf-awq-quick"
+quant_path = "blehyaric/llama-2-7b-chat-hf-awq-quick"
 
 model = AutoAWQForCausalLM.from_quantized(quant_path).to(device)
 tokenizer = AutoTokenizer.from_pretrained(quant_path, trust_remote_code=True)
